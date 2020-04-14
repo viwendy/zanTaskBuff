@@ -1,0 +1,95 @@
+{~$title = "购买会员"}
+
+<include file="Public:header"/>
+
+
+
+<body style="background-color:#f8f8f8;">
+
+<section class="grade-main mt" style="margin-top: -6px;">
+    <form id="form1" class="" data-callback="1" name="form1" method="post" action="{:U('vip')}" >
+        <input type="hidden" name="price" id="price" value="" />
+        <input type="hidden" name="level" id="level" value="" />
+   
+
+        <div class="btm">
+   
+
+            <div class="list" id="vip_sel">
+                <volist name="member_level" id="vo">
+                   <div class="sub <if condition="$vo['level'] gt $member['level']">lv</if>" data-id="{$vo.level}" data-price="{$vo.price}">
+	<p class="meme_vip_ac"> <img src="/tpl/Public/images/v2.png"/> <a href="#">{$vo.name}</a> <span>会员费：¥{$vo.price}元</span></p>
+	<p class="meme_vip_xq meme_vip_xqq">每天可做任务：{$vo.day_limit_task_num}个</p>
+	<p class="meme_vip_xq">一级任务分佣：{$info.bfb_1}%<span></span>一级推荐奖励：¥{$vo.rebate_price_1}</p>
+	<p class="meme_vip_xq">二级任务分佣：{$info.bfb_2}%<span></span>二级推荐奖励：¥{$vo.rebate_price_2}</p>
+</div>
+                </volist>
+            </div>
+
+    
+
+            <div class="recharge_box" style="margin-top: 0;border-top: 0; padding-bottom: 40px;">
+                <input type="hidden" name="payment_type" id="payment_type" value="">
+                <!--<p>选择支付方式：</p>-->
+                <label data-key="alipay">
+                    <i class="alipay"></i> 支付宝支付 <span></span>
+                </label>
+           
+
+
+        <button type="submit" id="submit">立即缴纳<span id="show_price_1"></span></button>
+               </div> </div>
+    </form>
+</section> 
+
+
+
+</body>
+ 
+
+
+
+
+<script>
+    $(document).ready(function(){
+        $('.recharge_box label').click(function(){
+            $('.recharge_box label span').removeClass('active');
+            $(this).find('span').addClass('active');
+            var payment_type = $(this).attr('data-key');
+            $('#payment_type').val(payment_type);
+        });
+
+        $('#vip_sel .sub.lv').click(function(){
+            var price = $(this).attr('data-price');
+            var level = $(this).attr('data-id');
+            $(this).addClass('active').siblings().removeClass('active');
+            $('#show_price_1').html("（￥" +price+"）");
+            $('#price').val(price);
+            $('#level').val(level);
+        });
+
+        $('#submit').click(function(){
+            var payment_type = $('#payment_type').val();
+            var level = $('#level').val();
+
+            if( level == '' ) {
+                sp_tip('请选择要升级的级别.');
+                return false;
+            }
+            if( payment_type == '' ) {
+                sp_tip('请选择支付渠道.');
+                return false;
+            }
+        })
+        $('#form1').submit();
+    });
+
+    function submit_callback(data){
+        if( data.status == 1 ) {
+            window.location.href = data.url;
+        } else {
+            sp_tip(data.info);
+        }
+    }
+</script>
+    <include file="Public:footer"/>

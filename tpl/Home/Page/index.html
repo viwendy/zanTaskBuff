@@ -1,0 +1,21 @@
+<include file="Public:header"/>
+
+<body class="gray_bg">
+<div class="body_main">
+    <!-- 头部部分 开始 -->
+    <!--主体部分 开始-->
+    <div class="page_main tline mt" style="margin-top:-6px;">
+        <div class="page_list">
+            <ul>
+                <volist name="list" id="vo">
+                    <li>
+                        <a href="{:U('show',array('id'=>$vo['id']))}">{$vo.title}<span>&nbsp;</span></a>
+                    </li>
+                </volist>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<include file="Public:header"/>
+<body class="gray_bg" style="background:#f2f2f2;">
+<!-- 头部部分 开始 -->
+<div class="head_img">
+		<img src="/tpl/Public/images/header.png"/>
+	</div>
+	
+	<div class="head_nav">
+		<ul>
+		<a href="/index.php/Home/Page/index">
+			<li>
+				<img src="/tpl/Public/images/h1.png"/>
+				<p>新闻公告</p>
+			</li>
+			</a>
+			
+		<!--	<a href="http://www.geilime.com/">
+			<li>
+				<img src="/tpl/Public/images/h2.png"/>
+				<p>优惠券</p>
+			</li>
+			</a>
+			
+			<a href="https://liqucn.com/os/ios/rj/">
+			<li>
+				<img src="/tpl/Public/images/h3.png"/>
+				<p>软件乐园</p>
+			</li>
+			</a>
+			
+			<a href="http://m.doyo.cn/">
+			<li>
+				<img src="/tpl/Public/images/h4.png"/>
+				<p>游戏天地</p>
+			</li>
+			</a>-->
+		</ul>
+	</div>
+
+  <!--头部选择-->
+        <div class="header__top">
+        	<p class="header__top_fl">
+        		<a href="/index.php/Home/Task/lists_lb/lb/1.html"><img src="/tpl/Public/images/dy.png"/>抖音任务</a>
+        	</p>
+        	<p class="header__top_fl">
+        		<a href="/index.php/Home/Task/lists_lb/lb/2.html" class="header__top_fr"><img src="/tpl/Public/images/ks.png"/>快手任务</a>
+        	</p>
+        	<p class="header__top_fl">
+        		<a href="/index.php/Home/Task/lists_lb/lb/4.html" class="header__top_frr"><img src="/tpl/Public/images/hs.png"/>火山任务</a>
+        	</p>
+        	<p class="header__top_fl">
+        		<a href="/index.php/Home/Task/lists_lb/lb/3.html" class="header__top_frrr"><img src="/tpl/Public/images/ws.png"/>微视任务</a>
+        	</p>
+        </div>
+        <!--头部选择结束-->
+  
+  
+  
+    <div class="task_list renwuliebiao_a" style="padding-bottom:4rem;margin-top:0rem;background:#f2f2f2;width: 100%;">
+      <ul>
+        <volist name="task_list.type_0" id="vo">
+
+
+        	<li>
+        			<duv class="renwu_xq_img">
+        				<p class="renwu_xq_dj"><volist name="level" id="vv">
+                
+                       			<if condition="$vv['level'] eq $vo['level']">{$vv.name}</if>
+                          </volist></p>
+        				<if condition="$vo['tasklb'] eq 1"><img src="/tpl/Public/images/dy.png"/></if>
+        				<if condition="$vo['tasklb'] eq 2"><img src="/tpl/Public/images/ks.png"/></if>
+                     	 <if condition="$vo['tasklb'] eq 3"><img src="/tpl/Public/images/ws.png"/></if>
+                      <if condition="$vo['tasklb'] eq 4"><img src="/tpl/Public/images/hs.png"/></if>
+        			</duv>
+        			
+        			<div class="renwu_xq_center">
+        				<p class="renwu_xq_pa">要求：<if condition="$vo['task_require'] eq 1">点赞</if>
+                              <if condition="$vo['task_require'] eq 2">关注</if>
+                              <if condition="$vo['task_require'] eq 3">点赞+关注</if></p>
+        				<p class="renwu_xq_pa">需方：admin<span>{$vo.leftnum}/5000</span></p>
+        				<p class="renwu_xq_pa">截止：{$vo.end_time|date='m-d H:i',###}</p>
+        			</div>
+        			
+        			<div class="renwu_jd">
+        				<p class="renwu_jdjg">¥ {$vo.price|floatval}元</p>
+        				<p class="renwu_jdbtn">
+        					<a href="javascript:;" class="get_task" data-id='{$vo.id}'>接单</a>
+        				</p>
+        			</div>
+        		</li>
+        	
+        	
+        	
+        	
+        	
+        </volist>
+        </ul>
+    </div>
+
+   
+
+
+
+<include file="Public:footer"/>
+  <script>
+  	//领取任务
+    $('.get_task').click(function(){
+        var task_id = $(this).attr('data-id');
+        var url = "{:U('Task/get_task')}";
+        $.post(url,{id:task_id},function(data){
+            if( data.status == 1 ) {
+                sp_alert(data.info);
+                $('.bala-btn').css('background-color','#ccc').html('任务已领取');
+            } else {
+                sp_alert(data.info);
+            }
+        },'json')
+    })
+  </script>
+</body>
+</html>

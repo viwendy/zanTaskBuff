@@ -1,0 +1,126 @@
+{~$title = "个人中心"}
+<include file="Public:header"/>
+
+<body class="gray_bg" style="background: #f2f2f2;">
+	
+	<div class="meme_header">
+		<p class="meme_header_sz"><a href="{:U('info')}"><img src="/tpl/Public/images/sz.png"/></a></p>
+		<div class="meme_header_logoxx">
+		<img class="meme_qlogo" src="/tpl/Public/images/user.png"/>
+		<div class="meme_userxx">
+			<p>{$data.nickname}</p>
+			<p>{$data.username}</p>
+		</div>
+		<p class="meme_tixian">
+			<a href="/index.php/Home/Member/tixian.html">提现</a>
+		</p>
+	</div>
+	</div>
+	
+	<div class="meme_user_ye">
+		
+		<div class="meme_user_ta">
+			<ul>
+				<li>
+					<p class="meme_user_xx">{$total_price.today|floatval}</p>
+					<p class="meme_user_xxx">任务收益</p>
+				</li>
+				<li>
+					<p class="meme_user_xx">{$data.price}</p>
+					<p class="meme_user_xxx">可用余额</p>
+				</li>
+				<li>
+					<p class="meme_user_xx">0.00</p>
+					<p class="meme_user_xxx">任务佣金</p>
+				</li>
+			</ul>
+		</div>
+		<div class="meme_user_ta">
+			<ul>
+				<li>
+					<p class="meme_user_xx">{$level_info.day_limit_task_num}</p>
+					<p class="meme_user_xxx">可做任务</p>
+				</li>
+				<li>
+					<p class="meme_user_xx">0.00</p>
+					<p class="meme_user_xxx">推荐奖励</p>
+				</li>
+				<li>
+					<p class="meme_user_xx">{$total_team.all|floatval}</p>
+					<p class="meme_user_xxx">团队人数</p>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+	
+	<div class="user_dengji">
+		<div class="user_dengji_a">
+			<p class="user_dengji_aa">{$level_name}<span>{$level_info.day_limit_task_num}个/天</span></p>
+			<p>今日完成任务：{$task_num}</p>
+		</div>
+		<div class="user_dengji_a">
+			<p class="user_dengji_aa">{$total_price.today|floatval}元</p>
+			<p>今日收益</p>
+		</div>
+	</div>
+	
+	
+	<div class="meme_user_bt">
+		<ul>
+		<!--	<a href="http://a013.weqixun.cn/">
+			<li>
+				<img class="meme_user_axx" src="/tpl/Public/images/meme1.png"/>
+				<p>红包多多</p>
+				<img class="meme_user_ax" src="/tpl/Public/images/memea.png"/>
+			</li>
+			</a>-->
+			
+			<a href="/index.php/Home/Page/index">
+			<li>
+				<img class="meme_user_axx" src="/tpl/Public/images/meme2.png"/>
+				<p>新闻公告</p>
+				<img class="meme_user_ax" src="/tpl/Public/images/memea.png"/>
+			</li>
+			</a>
+			
+			
+			<a href="{:U('info_edit',array('field'=>'bank_number'))}">
+			<li>
+				<img class="meme_user_axx" src="/tpl/Public/images/meme3.png"/>
+				<p>提现账户</p>
+				<img class="meme_user_ax" src="/tpl/Public/images/memea.png"/>
+			</li>
+			</a>
+			
+			<a href="{:U('vip')}">
+			<li>
+				<img class="meme_user_axx" src="/tpl/Public/images/meme4.png"/>
+				<p>我的等级</p>
+				<img class="meme_user_ax" src="/tpl/Public/images/memea.png"/>
+			</li>
+			</a>
+			
+			
+			<a href="{:U('Public/share',array('smid'=>$member['id']))}">
+			<li>
+				<img class="meme_user_axx" src="/tpl/Public/images/meme5.png"/>
+				<p>推广赚钱</p>
+				<img class="meme_user_ax" src="/tpl/Public/images/memea.png"/>
+			</li>
+			</a>
+			
+			<a href="	javascript:sp_alert('敬请期待')">
+			<li>
+				<img class="meme_user_axx" src="/tpl/Public/images/meme6.png"/>
+				<p>自媒体账号</p>
+				<img class="meme_user_ax" src="/tpl/Public/images/memea.png"/>
+			</li>
+			</a>
+		</ul>
+	</div>
+
+<include file="Public:footer"/>
+
+</body>
+</html>

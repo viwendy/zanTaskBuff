@@ -1,0 +1,52 @@
+{~$title = "个人信息"}
+<include file="Public:header"/>
+
+<body class="gray_bg">
+<div id="body">
+    <!-- 头部部分 开始 -->
+    <!--主体部分 开始-->
+    <div class="body_main tline mt info_main" style="margin-top: -8px;">
+        <ul>
+            <li>
+                <a href="{:U('info_edit',array('field'=>'nickname'))}"><p>姓名</p>
+                    <span>&nbsp;{$member.nickname}</span></a>
+            </li>
+            <li>
+                <a href="{:U('info_edit',array('field'=>'phone'))}"><p>手机</p>
+                    <span>&nbsp;{$member.phone}</span></a>
+            </li>
+            <li>
+                <a href="{:U('info_edit',array('field'=>'sex'))}"><p>性别</p>
+                    <span>&nbsp;
+                        <if condition="$member['sex'] eq '0'">男</if>
+                        <if condition="$member['sex'] eq '1'">女</if>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="{:U('info_edit',array('field'=>'address'))}"><p>地址</p>
+                    <span>&nbsp;{$member.address}</span></a>
+            </li>
+
+        </ul>
+        <ul style="margin-top: 7px">
+        
+
+            <li>
+                <a href="{:U('info_edit',array('field'=>'bank_number'))}"><p>收款信息</p>
+                    <span>&nbsp;{$member.bank_number}</span></a>
+            </li>
+
+            <!--<li>
+                <a href="{:U('info_edit',array('field'=>'occupation'))}">
+                    <p>职业</p>
+                    <span>{$member.occupation}</span>
+                </a>
+            </li>-->
+        </ul>
+    </div>
+</div>
+  
+  <a href="{:U('Public/logout')}" style="width:92%;height:3rem;display:block;background:#1fb2f6;line-height:3rem;text-align:center;color:#fff;margin-left:4%;border-radius:0.5rem;">退出系统</a>
+</body>
+</html>

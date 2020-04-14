@@ -1,0 +1,58 @@
+{~$title = "任务记录"}
+<include file="Public:header"/>
+<style type="text/css">
+	.header__top_fl{
+		width: 50%;
+	}
+	.header__top_ffr{
+		color: red;
+	}
+</style>
+<body class="gray_bg">
+<div class="header__top">
+        	<p class="header__top_fl">
+        		<a href="{:U('Task/submission_task')}"><img src="/tpl/Public/images/dai.png"/>待完成</a>
+        	</p>
+        	<p class="header__top_fl" style="border-bottom: 2px #22a8db solid;box-sizing: border-box;">
+        		<a href="{:U('Member/apply')}" class="header__top_fr"><img src="/tpl/Public/images/yi.png"/>已完成</a>
+        	</p>
+        	<p class="header__top_fl" style="display:none;">
+        		<a href="{:U('Member/apply')}" class="header__top_ffr"><img src="/tpl/Public/images/zheng.png"/>审核/争议</a>
+        	</p>
+       </div>
+
+
+ <div class="apply_list" style="margin-bottom: 4rem;">
+        <!--<div class="apply_nav">
+            <span class="active">
+                <a href="">供应信息</a>
+            </span>
+            <span>
+                <a href="">需求信息</a>
+            </span>
+        </div>-->
+        <if condition="!empty($list)">
+            <volist name="list" id="vo">
+                <div class="item">
+                    <a href="{:U('apply_show',array('id'=>$vo['id']))}">
+                        <h6>{$vo.title} <span class="status{$vo.status}">{~echo $apply_status[$vo['status']]}</span></h6>
+                        <p>任务收益：￥{$vo.price|floatval}</p>
+                        <p>申请时间：{$vo.create_time|date="Y-m-d",###}</p>
+                    </a>
+                </div>
+            </volist>
+            <else/>
+            <div class="none">
+                <div class="none_box">
+                    <img src="__PUBLIC_IMAGES__/none.png" alt="">
+                    <span>暂无信息</span>
+                </div>
+            </div>
+        </if>
+    </div>
+
+
+
+<include file="Public:footer"/>
+</body>
+</html>

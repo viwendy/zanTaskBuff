@@ -1,0 +1,69 @@
+{~$title = "任务记录"}
+<include file="Public:header"/>
+
+<style type="text/css">
+	.header__top_fl{
+		width: 50%;
+	}
+	.header__top_ffr{
+		color: red;
+	}
+</style>
+<body class="gray_bg" style="background: #f2f2f2;">
+<!-- 头部部分 开始 -->
+
+<div class="header__top">
+        	<p class="header__top_fl" style="border-bottom: 2px #22a8db solid;box-sizing: border-box;">
+        		<a href="{:U('Task/submission_task')}"><img src="/tpl/Public/images/dai.png"/>待完成</a>
+        	</p>
+        	<p class="header__top_fl">
+        		<a href="{:U('Member/apply')}" class="header__top_fr"><img src="/tpl/Public/images/yi.png"/>已完成</a>
+        	</p>
+  <p class="header__top_fl" style="display:none;">
+        		<a href="{:U('Member/apply')}" class="header__top_ffr"><img src="/tpl/Public/images/zheng.png"/>审核/争议</a>
+        	</p>
+        </div>
+
+
+ <div class="renwuliebiao">
+        	<ul>
+        		<volist name="list" id="vo">
+        		<li>
+        			<div class="renwuliebiao_left_tu">
+        				<if condition="$vo['tasklb'] eq 1"><img src="/tpl/Public/images/dy.png"/><p>抖音任务</p></if>
+        				<if condition="$vo['tasklb'] eq 2"><img src="/tpl/Public/images/ks.png"/><p>快手任务</p></if>
+                     	 <if condition="$vo['tasklb'] eq 3"><img src="/tpl/Public/images/ws.png"/><p>微视任务</p></if>
+                      <if condition="$vo['tasklb'] eq 4"><img src="/tpl/Public/images/hs.png"/><p>火山任务</p></if>
+        			</div>
+        			
+        			<div class="renwuliebiao_cen_p">
+        				<p>
+        					<img src="/tpl/Public/images/yq.png"/>
+        					<a href="#">任务要求：<if condition="$vo['task_require'] eq 1">点赞</if>
+                              <if condition="$vo['task_require'] eq 2">关注</if>
+                              <if condition="$vo['task_require'] eq 3">点赞+关注</if></a>
+        				</p>
+        				<p>
+        					<img src="/tpl/Public/images/sj.png"/>
+        					<a href="#">发布时间：{$vo.create_time|date='Y-m-d H:i',###}</a>
+        				</p>
+        				<a href="{$vo.video_url}" class="task_dkrwsp">打开任务视频</a>
+        			</div>
+        			
+        			<div class="renwuliebiao_yjlq">
+        				<p>
+        					<span>任务佣金</span>
+        					<span>{$vo.price|floatval}元</span>
+        				</p>
+        				<a href="{:U('submission_task_do',array('id'=>$vo['id']))}">提交</a>
+        			</div>
+        			
+        		</li>
+        		</volist>
+        	</ul>
+        </div>
+
+
+<include file="Public:footer"/>
+</body>
+</html>

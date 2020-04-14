@@ -1,0 +1,557 @@
+[ 2020-04-14T15:42:19+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000794s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001195s ]
+NOTIC: [8] Undefined index: user E:\workspace\zanTaskBuff\Application\Common\Controller\AdminBaseController.class.php 第 16 行.
+ERR: SQLSTATE[HY000] [1049] Unknown database 'demo'
+
+[ 2020-04-14T15:42:47+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+NOTIC: [8] Undefined index: user E:\workspace\zanTaskBuff\Application\Common\Controller\AdminBaseController.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0067s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='' and g.status='1' )  [ RunTime:0.0328s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000248s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000565s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015448s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015635s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000608s ]
+
+[ 2020-04-14T15:42:51+08:00 ] 127.0.0.1 /index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000654s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000220s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000409s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048285s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048476s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000887s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001177s ]
+
+[ 2020-04-14T15:43:03+08:00 ] 127.0.0.1 /index.php/Admin/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000137s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `dt_users` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `dt_users` WHERE `username` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2020-04-14T15:43:03+08:00 ] 127.0.0.1 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0009s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0011s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0171s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') E:\workspace\zanTaskBuff\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dt_admin_nav` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `dt_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000366s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000544s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.140535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000763s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000895s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001054s ]
+
+[ 2020-04-14T15:43:04+08:00 ] 127.0.0.1 /index.php/Admin/Index/tongji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001167s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001710s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0012s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0011s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member_tixian` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0017s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` LIMIT 1   [ RunTime:0.0217s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member_tixian` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1586707200 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0253s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1586188800 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1584201600 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1586707200 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1586188800 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1584201600 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: select sum(price) as sub_total_price, count(id) as sub_number, FROM_UNIXTIME(create_time, '%Y-%m-%d' ) as `date` from dt_pay where 1 and ( create_time >= 1584201600 and create_time < 1586879999 ) GROUP BY FROM_UNIXTIME(create_time, '%Y%m%d' ) [ RunTime:0.0461s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000449s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000608s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.096948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097258s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000856s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001147s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001869s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002185s ]
+
+[ 2020-04-14T15:46:48+08:00 ] 127.0.0.1 /index.php/Admin/Task/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000865s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001138s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0012s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0009s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0014s ]
+NOTIC: [2048] Only variables should be passed by reference E:\workspace\zanTaskBuff\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0150s ]
+NOTIC: [8] Undefined variable: map E:\workspace\zanTaskBuff\Application\Common\Controller\AdminBaseController.class.php 第 112 行.
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2048] Only variables should be passed by reference E:\workspace\zanTaskBuff\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_task` ORDER BY `id` desc LIMIT 0,20   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000353s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000644s ]
+NOTIC: [8] Undefined index: type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\50e054dd6e9446b43f58e54b1cb79bed.php 第 51 行.
+NOTIC: [8] Undefined index: type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\50e054dd6e9446b43f58e54b1cb79bed.php 第 51 行.
+NOTIC: [8] Undefined index: type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\50e054dd6e9446b43f58e54b1cb79bed.php 第 51 行.
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\50e054dd6e9446b43f58e54b1cb79bed.php 第 59 行.
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\50e054dd6e9446b43f58e54b1cb79bed.php 第 59 行.
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\50e054dd6e9446b43f58e54b1cb79bed.php 第 59 行.
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\50e054dd6e9446b43f58e54b1cb79bed.php 第 59 行.
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\50e054dd6e9446b43f58e54b1cb79bed.php 第 59 行.
+NOTIC: [8] Undefined index: start_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\50e054dd6e9446b43f58e54b1cb79bed.php 第 65 行.
+NOTIC: [8] Undefined index: end_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\50e054dd6e9446b43f58e54b1cb79bed.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104908s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.105129s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001963s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002442s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002966s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003243s ]
+
+[ 2020-04-14T15:46:49+08:00 ] 127.0.0.1 /index.php/Admin/TaskApply/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_task_apply a LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\workspace\zanTaskBuff\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,b.title,b.level,b.type,c.username,c.phone FROM dt_task_apply a left JOIN dt_task as b on a.task_id = b.id left JOIN dt_member as c on a.member_id = c.id  ORDER BY a.id desc LIMIT 0,100   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000283s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000429s ]
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: start_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 78 行.
+NOTIC: [8] Undefined index: end_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 79 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 91 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 98 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 110 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 110 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 110 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.120009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.120162s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000908s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001270s ]
+
+[ 2020-04-14T15:46:51+08:00 ] 127.0.0.1 /index.php/Admin/TaskApply/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0006s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_task_apply a LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2048] Only variables should be passed by reference E:\workspace\zanTaskBuff\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,b.title,b.level,b.type,c.username,c.phone FROM dt_task_apply a left JOIN dt_task as b on a.task_id = b.id left JOIN dt_member as c on a.member_id = c.id  ORDER BY a.id desc LIMIT 0,100   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000276s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000429s ]
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 72 行.
+NOTIC: [8] Undefined index: start_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 78 行.
+NOTIC: [8] Undefined index: end_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 79 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 91 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 98 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 110 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 110 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 110 行.
+NOTIC: [8] Undefined index: status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\a02a0909f9f97a7187ac4977a5fa41bf.php 第 110 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023455s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000656s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2020-04-14T15:46:53+08:00 ] 127.0.0.1 /index.php/Admin/Pay/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000752s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000978s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_pay a LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM dt_pay a LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\workspace\zanTaskBuff\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,c.username,c.nickname FROM dt_pay a left JOIN dt_member as c on a.member_id = c.id  ORDER BY a.id desc LIMIT 0,20   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000293s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000440s ]
+NOTIC: [8] Undefined index: payment_type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\394cd80b3f8943c4a42c1306a6b5e920.php 第 53 行.
+NOTIC: [8] Undefined index: payment_type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\394cd80b3f8943c4a42c1306a6b5e920.php 第 53 行.
+NOTIC: [8] Undefined index: payment_type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\394cd80b3f8943c4a42c1306a6b5e920.php 第 53 行.
+NOTIC: [8] Undefined index: platform_no E:\workspace\zanTaskBuff\Runtime\Cache\Admin\394cd80b3f8943c4a42c1306a6b5e920.php 第 58 行.
+NOTIC: [8] Undefined index: start_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\394cd80b3f8943c4a42c1306a6b5e920.php 第 62 行.
+NOTIC: [8] Undefined index: end_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\394cd80b3f8943c4a42c1306a6b5e920.php 第 63 行.
+NOTIC: [8] Undefined variable: tixian_status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\394cd80b3f8943c4a42c1306a6b5e920.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.139804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140055s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001010s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001181s ]
+
+[ 2020-04-14T15:46:54+08:00 ] 127.0.0.1 /index.php/Admin/Pay/price_log.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001182s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_member_price_log` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_member_price_log a LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\workspace\zanTaskBuff\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,c.username,c.nickname,c.phone,c.bank_name,c.bank_user,c.bank_number FROM dt_member_price_log a left JOIN dt_member as c on a.member_id = c.id  ORDER BY a.id desc LIMIT 0,20   [ RunTime:0.0006s ]
+SQL: SELECT SUM(price) AS tp_sum FROM dt_member_price_log a WHERE a.type < 10 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000324s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000472s ]
+NOTIC: [8] Undefined index: type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 53 行.
+NOTIC: [8] Undefined index: member_id E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 58 行.
+NOTIC: [8] Undefined index: start_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 62 行.
+NOTIC: [8] Undefined index: end_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 63 行.
+NOTIC: [8] Undefined index: type E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 75 行.
+NOTIC: [8] Undefined variable: tixian_status E:\workspace\zanTaskBuff\Runtime\Cache\Admin\425e0c8e5b79ec410d0748d7dd03cd00.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055841s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055988s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000833s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2020-04-14T15:46:55+08:00 ] 127.0.0.1 /index.php/Admin/Pay/tixian.html?status=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0008s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0007s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM dt_member_tixian a WHERE a.status = '0' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(price) AS tp_sum FROM dt_member_tixian a WHERE a.status = '0' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT SUM(actual_price) AS tp_sum FROM dt_member_tixian a WHERE a.status = '0' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2048] Only variables should be passed by reference E:\workspace\zanTaskBuff\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT a.*,c.nickname,c.phone,c.bank_name,c.bank_user,c.bank_number FROM dt_member_tixian a left JOIN dt_member as c on a.member_id = c.id  WHERE a.status = '0' ORDER BY a.id desc LIMIT 0,20   [ RunTime:0.0004s ]
+SQL: SELECT count(id) as total,`status` FROM `dt_member_tixian` GROUP BY status  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000341s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000498s ]
+NOTIC: [8] Undefined offset: 0 E:\workspace\zanTaskBuff\Runtime\Cache\Admin\9852fab6ea8ecb6dbb164f204327a3e2.php 第 45 行.
+NOTIC: [8] Undefined offset: -1 E:\workspace\zanTaskBuff\Runtime\Cache\Admin\9852fab6ea8ecb6dbb164f204327a3e2.php 第 45 行.
+NOTIC: [8] Undefined index: start_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\9852fab6ea8ecb6dbb164f204327a3e2.php 第 59 行.
+NOTIC: [8] Undefined index: end_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\9852fab6ea8ecb6dbb164f204327a3e2.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.107332s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.107518s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2020-04-14T15:46:58+08:00 ] 127.0.0.1 /index.php/Admin/Member/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000933s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0004s ]
+NOTIC: [2048] Only variables should be passed by reference E:\workspace\zanTaskBuff\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 0 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 1 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 3 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE `level` = 4 LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: map E:\workspace\zanTaskBuff\Application\Common\Controller\AdminBaseController.class.php 第 112 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2048] Only variables should be passed by reference E:\workspace\zanTaskBuff\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_member` ORDER BY `id` desc LIMIT 0,30   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=52774 or p2=52774 or p3=52774 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=52773 or p2=52773 or p3=52773 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=52772 or p2=52772 or p3=52772 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=52771 or p2=52771 or p3=52771 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=52770 or p2=52770 or p3=52770 ) LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` WHERE ( p1=52769 or p2=52769 or p3=52769 ) LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [2048] Only variables should be passed by reference E:\workspace\zanTaskBuff\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000441s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000600s ]
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 55 行.
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: level E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 56 行.
+NOTIC: [8] Undefined index: id E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 65 行.
+NOTIC: [8] Undefined index: keywords E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 71 行.
+NOTIC: [8] Undefined index: start_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 76 行.
+NOTIC: [8] Undefined index: end_date E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 78 行.
+NOTIC: [8] Undefined index: is_area E:\workspace\zanTaskBuff\Runtime\Cache\Admin\c36ad2088ecfedbb1e6e6aebc8965af2.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104548s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000724s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000937s ]
+
+[ 2020-04-14T15:46:59+08:00 ] 127.0.0.1 /index.php/Admin/Level/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0006s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: map E:\workspace\zanTaskBuff\Application\Common\Controller\AdminBaseController.class.php 第 112 行.
+SQL: SHOW COLUMNS FROM `dt_level` [ RunTime:0.0007s ]
+NOTIC: [2048] Only variables should be passed by reference E:\workspace\zanTaskBuff\ThinkPHP\Library\Think\Db\Driver.class.php 第 769 行.
+SQL: SELECT * FROM `dt_level` ORDER BY `id` asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000367s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000532s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109827s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.110187s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001540s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002742s ]
+
+[ 2020-04-14T15:47:04+08:00 ] 127.0.0.1 /index.php/Admin/Nav/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0007s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0005s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0005s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') E:\workspace\zanTaskBuff\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dt_admin_nav` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `dt_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000283s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000441s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025107s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001053s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001690s ]
+
+[ 2020-04-14T16:58:51+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000645s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0021s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0014s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0007s ]
+NOTIC: [2048] Declaration of Common\Model\AdminNavModel::getTreeData() should be compatible with Common\Model\BaseModel::getTreeData($type = 'tree', $order = '', $name = 'name', $child = 'id', $parent = 'pid') E:\workspace\zanTaskBuff\Application\Common\Model\AdminNavModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `dt_admin_nav` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `dt_admin_nav` ORDER BY order_number is null,`order_number`,`id`  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000350s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000516s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.116542s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116817s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001429s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006907s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007513s ]
+
+[ 2020-04-14T16:58:52+08:00 ] 127.0.0.1 /index.php/Admin/Index/tongji.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001260s ]
+SQL: SHOW COLUMNS FROM `dt_auth_group_access` [ RunTime:0.0022s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM dt_auth_group_access a INNER JOIN dt_auth_group g on a.group_id=g.id  WHERE ( a.uid='88' and g.status='1' )  [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `dt_auth_rule` [ RunTime:0.0016s ]
+SQL: SELECT `condition`,`name` FROM `dt_auth_rule` WHERE `id` IN ('6','96','20','1','2','3','4','5','64','7','8','9','10','11','12','13','14','15','16','123','124','125','19','164','104','105','106','108','118','153','109','110','111','112','117','148','149','150','185','134','135','136','137','139','151','182','183','184','186','161','165','166','167','147','162','163','179','180','181','157','158','168','169','171','172','173','174','175','176','177','178','69','70','71') AND `type` = 1 AND `status` = 1  [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `dt_task_apply` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `dt_member_tixian` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member_tixian` WHERE `status` = 0 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_member` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_member` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `dt_task` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task` LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `dt_pay` [ RunTime:0.0031s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member_tixian` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_member` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1586707200 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1586188800 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `dt_pay` WHERE ( ( create_time >= 1584201600 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1586707200 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1586188800 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `dt_task_apply` WHERE `status` = 2 AND ( ( create_time >= 1584201600 and create_time < 1586793600 ) ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: select sum(price) as sub_total_price, count(id) as sub_number, FROM_UNIXTIME(create_time, '%Y-%m-%d' ) as `date` from dt_pay where 1 and ( create_time >= 1584201600 and create_time < 1586879999 ) GROUP BY FROM_UNIXTIME(create_time, '%Y%m%d' ) [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000776s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001131s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.119359s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.119879s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001380s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001693s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001203s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001642s ]
+
